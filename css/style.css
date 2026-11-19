@@ -1,1 +1,94 @@
-/* Här skrivs all din CSS */
+:root {
+    --text-color: #2D2E3B;
+    --background-color-alt: #A1A5FF;
+    --background-color: #B0B1D4;
+    --hover: #3F416E;
+    --hover-text: #B0B1D4;
+}
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background-color: black;
+    margin: auto;
+    padding: auto;
+}
+
+#wrapper {
+    display: grid;
+    height: 212vh;
+    grid-template-rows: 5% 2.5% 1fr 7.5%;
+    grid-template-areas:
+    "hd"
+    "nv"
+    "mn"
+    "fo";
+}
+
+#wrapper header {
+    grid-area: hd;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 6rem;
+    padding: auto;
+    display: flex;
+    justify-content: center; 
+    font-family: "Abril Fatface", serif;
+}
+
+#wrapper nav {
+    grid-area: nv;
+    background-color: var(--background-color-alt);
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#wrapper nav a:hover {
+    background-color: var(--hover);
+    color: var(--hover-text);
+    border-color: var(--background-color-alt);
+}
+
+#wrapper nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    border-style: solid none solid none;
+    border-color: var(--hover-color);
+}
+
+#wrapper main {
+    grid-area: mn;
+    background-color: var(--background-color);
+    color: var(--text-color);
+
+    height: 100%;
+    
+    display: grid;
+    grid-template-rows: 1fr 10%; 
+}
+
+#wrapper main .img-container {
+    margin-inline: auto;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+#wrapper main .img-container img {
+    width: 100%;
+}
+
+#wrapper footer {
+    grid-area: fo;
+    background-color: var(--background-color-alt);
+    color: var(--text-color);
+}
